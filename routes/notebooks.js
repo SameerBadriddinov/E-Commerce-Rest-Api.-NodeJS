@@ -13,10 +13,10 @@ router.get("/", async (req, res) => {
       title: "Notebooks",
       isNotebooks: true,
       userId: req.user ? req.user._id.toString() : null,
-      notebooks,
+      notebooks: notebooks.reverse(),
     });
-  }catch(e) {
-    console.log(e)
+  } catch (e) {
+    console.log(e);
   }
 });
 
@@ -24,17 +24,17 @@ router.get("/:id/edit", auth, async (req, res) => {
   if (!req.query.allow) {
     return res.redirect("/");
   }
-  try{
+  try {
     const notebook = await Notebook.findById(req.params.id);
-    if(notebook.userId.toString() !== req.user._id.toString()) {
-      return res.redirect('/notebooks')
+    if (notebook.userId.toString() !== req.user._id.toString()) {
+      return res.redirect("/notebooks");
     }
     res.render("notebook-edit", {
       title: `Edit ${notebook.title}`,
       notebook,
     });
-  }catch(e) {
-    console.log(e)
+  } catch (e) {
+    console.log(e);
   }
 });
 

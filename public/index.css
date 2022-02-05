@@ -103,7 +103,7 @@
 .contant_box_404 {
   margin-top: -50px;
 }
-.avatar{
+.avatar {
   max-width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -160,11 +160,6 @@ ul {
   margin-right: 1rem;
   letter-spacing: 1px;
 }
-
-#title {
-  padding-left: 4.5rem;
-}
-
 #age {
   padding-left: 5rem;
 }
@@ -186,7 +181,7 @@ ul {
 
 @media (max-width: 780px) {
   .panel {
-    width: 65%;
+    width: 100%;
   }
 
   ul {
@@ -380,4 +375,67 @@ main img:hover {
 
 .img-tran:hover img {
   opacity: 0.5;
+}
+
+.navigationBar {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+}
+.navBar {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navLink ul {
+  display: flex;
+}
+
+.navLink ul li {
+  margin: 0 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+}
+.navMain a i {
+  color: #fff;
+  font-size: 30px;
+}
+.navLink ul li a i {
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+.navLink ul li a i:hover {
+  color: #888;
+}
+
+.myLogo {
+  font-size: 20px;
+  color: #fff;
+}
+@media only screen and (max-width: 900px) {
+  .img-tran:hover p {
+    opacity: 0;
+  }
+  .bascket h3,
+  .bascket h4 {
+    font-size: 20px;
+  }
+  .myLogo {
+    display: none;
+  }
+  .navLink ul li {
+    margin: 0 10px;
+  }
+  .navLink ul li a i {
+    font-size: 20px;
+  }
 }

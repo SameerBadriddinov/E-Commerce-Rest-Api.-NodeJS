@@ -1,58 +1,85 @@
-<nav class="grey darken-3">
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo">MACBOOK SHOP</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-
-      {{#if isHome}}
-        <li class="active"><a href="/">Home</a></li>
-      {{else}}
-        <li><a href="/">Home</a></li>
-      {{/if}}
-
-      {{#if isNotebooks}}
-        <li class="active"><a href="/notebooks">Notebooks</a></li>
-      {{else}}
-        <li><a href="/notebooks">Notebooks</a></li>
-      {{/if}}
-
-      {{#if isAuth}}
-
-        {{#if isAdd}}
-          <li class="active"><a href="/add">Create</a></li>
+<div class="navigationBar #616161 grey darken-2">
+  <div class="navBar">
+    <div class="navMain">
+      <a href="/"><i class="material-icons">home</i></a>
+    </div>
+    <div class="navLink">
+      <ul>
+        {{#if isNotebooks}}
+          <li align="center" class="active"><a href="/notebooks"><i
+                class="material-icons"
+              >laptop_mac</i></a></li>
         {{else}}
-          <li><a href="/add">Create</a></li>
+          <li align="center"><a href="/notebooks"><i
+                class="material-icons"
+              >laptop_mac</i></a></li>
         {{/if}}
 
-        {{#if isCard}}
-          <li class="active"><a href="/card">Basket</a></li>
+        {{#if isAuth}}
+
+          {{#if isAdd}}
+            <li align="center" class="active"><a href="/add"><i
+                  class="material-icons"
+                >add_a_photo</i></a></li>
+          {{else}}
+            <li align="center"><a href="/add"><i
+                  class="material-icons"
+                >add_a_photo</i></a></li>
+          {{/if}}
+
+          {{#if isCard}}
+            <li align="center" class="active"><a href="/card"><i
+                  class="material-icons"
+                >add_shopping_cart</i></a></li>
+          {{else}}
+            <li align="center"><a href="/card"><i
+                  class="material-icons"
+                >add_shopping_cart</i></a></li>
+          {{/if}}
+
+          {{#if isOrder}}
+            <li align="center" class="active"><a href="/orders"><i
+                  class="material-icons"
+                >attach_money</i></a></li>
+          {{else}}
+            <li align="center"><a href="/orders"><i
+                  class="material-icons"
+                >attach_money</i></a></li>
+          {{/if}}
+
+          {{#if isProfile}}
+            <li align="center" class="active"><a href="/profile"><i
+                  class="material-icons"
+                >perm_identity</i></a></li>
+          {{else}}
+            <li align="center"><a href="/profile"><i
+                  class="material-icons"
+                >perm_identity</i></a></li>
+          {{/if}}
+
+          <li align="center"><a href="/auth/logout" style="font-size: 30px;"><i
+                class="material-icons"
+              >exit_to_app</i></a></li>
+
         {{else}}
-          <li><a href="/card">Basket</a></li>
+
+          {{#if isLogin}}
+            <li class="active"><a href="/auth/login#login"><i
+                  class="material-icons"
+                >input</i></a></li>
+          {{else}}
+            <li><a href="/auth/login#login"><i
+                  class="material-icons"
+                >input</i></a></li>
+          {{/if}}
+
         {{/if}}
 
-        {{#if isOrder}}
-          <li class="active"><a href="/orders">Order</a></li>
-        {{else}}
-          <li><a href="/orders">Order</a></li>
-        {{/if}}
-
-        {{#if isProfile}}
-          <li class="active"><a href="/profile">Profile</a></li>
-        {{else}}
-          <li><a href="/profile">Profile</a></li>
-        {{/if}}
-
-        <li><a href="/auth/logout">Log out</a></li>
-
-      {{else}}
-
-        {{#if isLogin}}
-          <li class="active"><a href="/auth/login#login">Log in</a></li>
-        {{else}}
-          <li><a href="/auth/login#login">Log in</a></li>
-        {{/if}}
-
-      {{/if}}
-
-    </ul>
+      </ul>
+    </div>
+    <div class="myLogo">
+      Samar
+    </div>
   </div>
-</nav>
+</div>
+<div style="margin-top: 100px;"></div>

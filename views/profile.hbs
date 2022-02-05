@@ -1,4 +1,4 @@
-<div class="gradient">
+<div class="gradient col s12">
   <div id="panel" class="">
     <div id="inside-panel">
       <div class="gradient-border">
@@ -8,16 +8,9 @@
         <h1 style="color: black;">{{user.name}}</h1>
         <hr />
         {{#if user.avatarUrl}}
-          <img
-            src="/{{user.avatarUrl}}"
-            alt="avatar-{{user.name}}"
-          />
+          <img src="/{{user.avatarUrl}}" alt="avatar-{{user.name}}" />
         {{else}}
-          <img
-          class="avatar"
-            src="/user.png"
-            alt="avatar-{{user.name}}"
-          />
+          <img class="avatar" src="/user.png" alt="avatar-{{user.name}}" />
         {{/if}}
 
         <form action="/profile" method="POST" enctype="multipart/form-data">
@@ -28,6 +21,7 @@
               type="text"
               class="validate"
               required
+              value="{{user.name}}"
             />
             <label for="name">Enter Your Name</label>
             <span class="helper-text" data-error="Enter Your Name"></span>
@@ -49,5 +43,31 @@
         </form>
       </div>
     </div>
+  </div>
+  <div class="content_notebook">
+    {{#each myNoteboks}}
+      <div class="card">
+        <div class="card-image">
+          <img src="{{notebook.img}}" title="{{notebook.title}}" />
+        </div>
+        <div class="card-content">
+          <span class="card-title">{{notebook.title}}</span>
+          <p>{{notebook.descr}}</p>
+          <b class="price">{{notebook.price}}</b>
+        </div>
+        <div class="card-action actions">
+          <a href="/notebooks/{{id}}" target="_blank">Detail</a>
+          {{#if @root.isAuth}}
+            {{#ifeq userId._id @root.userId}}
+              <a href="/notebooks/{{id}}/edit?allow=true">Edit</a>
+            {{/ifeq}}
+            <form action="/card/add" method="POST">
+              <input type="hidden" name="id" value="{{id}}" />
+              <button type="submit" class="btn btn-primary">Buy</button>
+            </form>
+          {{/if}}
+        </div>
+      </div>
+    {{/each}}
   </div>
 </div>

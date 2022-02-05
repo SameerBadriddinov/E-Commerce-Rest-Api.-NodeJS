@@ -1,10 +1,17 @@
-<h4>Add New Notebooks</h4>
+<h5 align="center">Add New Notebook to Our Store</h5>
 {{#if error}}
   <p class="alert">{{error}}</p>
 {{/if}}
 <form action="/add" method="POST" class="z-depth-4 f_control" novalidate>
   <div class="input-field">
-    <input id="title" name="title" type="text" class="validate" required value="{{data.title}}" />
+    <input
+      id="title"
+      name="title"
+      type="text"
+      class="validate"
+      required
+      value="{{data.title}}"
+    />
     <label for="title">Notebooks model</label>
     <span class="helper-text" data-error="Enter Notebooks Name"></span>
   </div>
@@ -22,7 +29,14 @@
     <span class="helper-text" data-error="Enter Price"></span>
   </div>
   <div class="input-field">
-    <input id="img" name="img" type="text" class="validate" required value="{{data.img}}" />
+    <input
+      id="img"
+      name="img"
+      type="text"
+      class="validate"
+      required
+      value="{{data.img}}"
+    />
     <label for="img">URL Image</label>
     <span class="helper-text" data-error="Enter URL Image"></span>
   </div>

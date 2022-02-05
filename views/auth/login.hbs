@@ -5,11 +5,10 @@
       <li class="tab col s6"><a href="#register">Sign IN</a></li>
     </ul>
   </div>
-  <div id="login" class="col s6 offset-s3">
+  <div id="login" class="col s12 m6 offset-m3">
     {{#if loginError}}
       <p class="alert">{{loginError}}</p>
     {{/if}}
-    <h4>Log In Notebook Store</h4>
     <form action="/auth/login" method="POST" class="f_control">
       <div class="input-field">
         <input id="email" name="email" type="email" class="validate" required />
@@ -32,11 +31,10 @@
     </form>
   </div>
 
-  <div id="register" class="col s6 offset-s3">
+  <div id="register" class="col s12 m6 offset-m3">
     {{#if registerError}}
       <p class="alert">{{registerError}}</p>
     {{/if}}
-    <h4>Create Accaunt</h4>
     <form action="/auth/register" method="POST" class="f_control" novalidate>
       <div class="input-field">
         <input id="name" name="name" type="text" class="validate" required />
