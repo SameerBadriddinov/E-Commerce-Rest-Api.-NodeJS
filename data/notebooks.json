@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Macbook Air",
+    "price": "2000",
+    "img": "https://www.zdnet.com/a/hub/i/r/2020/11/16/37e33024-2892-4bb7-9d21-6ac6f7544def/resize/1200x900/df40c8ba0096e1a62c5879c1d42d069f/apple-macbook-pro-m1-2020-5.jpg",
+    "descr": "  ",
+    "id": "fa0dbe8e-ae50-48c3-ba45-d65d9eadebc0"
+  },
+  {
+    "title": "HP",
+    "price": "1100",
+    "img": "https://id-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/c/0/c06588625_6.png",
+    "descr": "1 HDMI 2.0; 1 AC smart pin; 1 headphone/microphone comboUp to 8 hours and 15 minutes1 year limited parts and labour",
+    "id": "141b5f3d-03f0-4d67-8dec-050ca09bfb52"
+  },
+  {
+    "title": "Dell",
+    "price": "1400",
+    "img": "https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/xps_notebooks/13_9370/global_spi/notebook-xps-13-9370-campaign-hero-504x350-ng.psd?fmt=jpg",
+    "descr": "11th Generation Intel® Core™ i7 processor\r\nWindows 10 Home 64\r\n14\" diagonal, FHD (1920 x 1080), IPS, micro-edge, BrightView, 250 nits, 45% NTSC\r\n16 GB DDR4-3200 SDRAM (2 x 8 GB)",
+    "id": "483598b4-0353-453f-8608-a8f6e46b52ae"
+  },
+  {
+    "title": "Acer HD",
+    "price": "900",
+    "img": "https://www.as3areh.com/wp-content/uploads/2021/08/acer.jpg",
+    "descr": "Чип Apple M1 с 8‑ядерным процессором и 7‑ядерным графическим процессоромНакопитель 256 ГБ",
+    "id": "8785ce7c-c8d0-4d30-a21d-8e6239518ceb"
+  }
+]

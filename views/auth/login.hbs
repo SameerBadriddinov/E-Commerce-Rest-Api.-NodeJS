@@ -1,0 +1,86 @@
+<div class="row auth">
+  <div class="col s12">
+    <ul class="tabs">
+      <li class="tab col s6"><a class="active" href="#login">Log IN</a></li>
+      <li class="tab col s6"><a href="#register">Sign IN</a></li>
+    </ul>
+  </div>
+  <div id="login" class="col s6 offset-s3">
+    {{#if loginError}}
+      <p class="alert">{{loginError}}</p>
+    {{/if}}
+    <h4>Log In Notebook Store</h4>
+    <form action="/auth/login" method="POST" class="f_control">
+      <div class="input-field">
+        <input id="email" name="email" type="email" class="validate" required />
+        <label for="email">Enter Your Email</label>
+        <span class="helper-text" data-error="Enter Your Email"></span>
+      </div>
+      <div class="input-field">
+        <input
+          id="password"
+          name="password"
+          type="password"
+          class="validate"
+          required
+        />
+        <label for="password">Enter Your Password</label>
+        <span class="helper-text" data-error="Enter Your Password"></span>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Log IN</button>
+    </form>
+  </div>
+
+  <div id="register" class="col s6 offset-s3">
+    {{#if registerError}}
+      <p class="alert">{{registerError}}</p>
+    {{/if}}
+    <h4>Create Accaunt</h4>
+    <form action="/auth/register" method="POST" class="f_control" novalidate>
+      <div class="input-field">
+        <input id="name" name="name" type="text" class="validate" required />
+        <label for="name">Enter Your Name</label>
+        <span class="helper-text" data-error="Enter Your Name"></span>
+      </div>
+
+      <div class="input-field">
+        <input
+          id="remail"
+          name="email"
+          type="email"
+          class="validate"
+          required
+        />
+        <label for="remail">Enter Your Email</label>
+        <span class="helper-text" data-error="Enter Your Email"></span>
+      </div>
+
+      <div class="input-field">
+        <input
+          id="rpassword"
+          name="password"
+          type="password"
+          class="validate"
+          required
+        />
+        <label for="rpassword">Enter Your Password</label>
+        <span class="helper-text" data-error="Enter Your Password"></span>
+      </div>
+
+      <div class="input-field">
+        <input
+          id="confirm"
+          name="confirm"
+          type="password"
+          class="validate"
+          required
+        />
+        <label for="confirm">Enter Your Password Again</label>
+        <span class="helper-text" data-error="Enter Your Password"></span>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Sign in</button>
+    </form>
+  </div>
+</div>

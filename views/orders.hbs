@@ -1,0 +1,50 @@
+<h3>My Orders</h4>
+{{#if orders.length}}
+  {{#each orders}}
+  <div class="card">
+    <div class="card-header">
+      <p><i>{{user.userId.name}}</i> {{user.userId.email}}</p>
+    </div>
+    <div class="card-content">
+      <ol>
+        {{#each notebooks}}
+          <li>
+            {{notebook.title}}
+            (x  <b>{{count}}</b> )  
+          </li>
+        {{/each}}
+      </ol>
+    </div>
+    <div class="card-action actions">
+      <p class="data">{{date}}</p>
+      <p>Price: <span class="price">{{price}}</span></p>
+    </div>
+    </div>
+  {{/each}}
+{{else}}
+<div class="mt-100">
+      <div class="row bascket">
+        <div class="col-md-12">
+          <div class="card bascket">
+            <div class="card-body cart">
+              <div class="col-sm-12 empty-cart-cls text-center">
+                <img
+                  src="https://i.imgur.com/dCdflKN.png"
+                  width="130"
+                  height="130"
+                  class="img-fluid mb-4 mr-3"
+                />
+                <h3><strong>Your Order is Empty</strong></h3>
+                <h4>Add something to make me happy :)</h4>
+                <a
+                  href="/notebooks"
+                  class="btn btn-primary cart-btn-transform m-3"
+                  data-abc="true"
+                >continue shopping</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{{/if}}
